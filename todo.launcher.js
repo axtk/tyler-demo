@@ -1,0 +1,1 @@
+tyler.dispatcher.fire('ready');

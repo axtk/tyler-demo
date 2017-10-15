@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>To-Do List — Tyler Demo</title>
+<link rel="stylesheet" href="todo.css">
+</head>
+<body>
+
+<div id="todo-list">
+
+    <div id="todo-input-form">
+        <form><input type="text" placeholder="Type and press Enter to add an item to the list"/></form>
+    </div>
+    
+    <div id="todo-list-container">
+        <ul>
+            <li>
+                <span class="controls">
+                    <button class="edit" title="Edit">&#9679;</button>
+                    <button class="remove" title="Remove">&#215;</button>
+                </span>
+                <span class="value-container">
+                    <label class="fixed">
+                        <input type="checkbox"/>
+                        <span class="value"></span>
+                    </label>
+                </span>
+                <span class="editing">
+                    <form><input type="text" value=""/></form>
+                </span>
+                <span class="break"></span>
+            </li>
+        </ul>
+    </div>
+    
+    <div id="todo-statusbar">
+        <span class="controls">
+            <button class="remove-completed">Remove completed items</button>
+        </span>
+        <span class="status"></span>
+        <span class="break"></span>
+    </div>
+    
+</div>
+
+<script src="tyler.min.js"></script>
+<script src="todo.form.js"></script>
+<script src="todo.list.js"></script>
+<script src="todo.statusbar.js"></script>
+<script src="todo.launcher.js"></script>
+</body>
+</html>

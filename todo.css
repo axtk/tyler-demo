@@ -1,0 +1,32 @@
+
+#todo-list {max-width:640px;margin:1.5em auto .5em auto;}
+
+#todo-input-form {padding:0 0 18px 0;}
+#todo-input-form input {width:100%;}
+
+
+#todo-list-container ul {display:block;list-style:none;border-top:1px solid #eee;padding:0;margin:0;}
+#todo-list-container li {display:block;background:none transparent;border-bottom:1px solid #eee;padding:7px 0 8px;margin:0;}
+
+#todo-list-container .controls {float:right;display:block;width:100px;text-align:right;}
+
+#todo-list-container .value-container {display:block;margin-right:110px;}
+#todo-list-container .value-container label {display:block;padding:3px 0;}
+
+#todo-list-container .editing {display:none;margin-right:110px;}
+#todo-list-container .editing input {width:100%;}
+#todo-list-container .editing form {display:block;}
+
+#todo-list-container li.editable .value-container {display:none;}
+#todo-list-container li.editable .editing {display:block;padding:2px 0 1px;}
+
+#todo-list-container li.completed {background:rgba(0,0,0,.02);}
+#todo-list-container li.completed .value {opacity:.3;}
+
+
+#todo-statusbar {padding:12px 0 0 0;}
+#todo-statusbar .controls {display:block;float:right;}
+#todo-statusbar .controls button {width:200px;}
+#todo-statusbar .status {display:block;padding:2px 0 0 0;}
+
+#todo-statusbar[data-completed="0"] .controls {visibility:hidden;}
