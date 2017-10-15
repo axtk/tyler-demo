@@ -1,5 +1,7 @@
 ;(function() {
 
+// this component class defines three custom methods and subscribes to a number of events
+
 var List = tyler.createElement({
     initialize() {
         var self = this, list = this.node.querySelector('ul');
@@ -45,15 +47,15 @@ var List = tyler.createElement({
         list.appendChild(item);
         this.fire('todo list updated');
     },
-    removeCompleted: function() {
-        var list = this.node.querySelector('ul');
-        Array.from(list.querySelectorAll('li.completed')).forEach(item => item.remove());
+    removeCompleted() {
+        Array.from(this.node.querySelectorAll('li.completed')).forEach(item => item.remove());
         this.fire('todo list updated');
     }
 })
 .on('ready', function() {
     this.initialize();
 })
+// here a single handler is assigned to multiple events
 .on(['todo list initialized', 'todo list updated'], function() {
     var list = this.node.querySelector('ul');
     this.fire('todo list notifies', {

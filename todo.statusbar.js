@@ -1,9 +1,11 @@
 ;(function() {
 
+// this component class defines three custom methods and subscribes to a couple of events
+
 var StatusBar = tyler.createElement({
     initialize() {
         this.node.querySelector('.remove-completed')
-            .addEventListener('click', this.fires('remove completed todo items'));
+            .addEventListener('click', () => this.fire('remove completed todo items'));
     },
     render(data) {
         if (!data) return;
